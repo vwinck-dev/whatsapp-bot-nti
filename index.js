@@ -35,10 +35,12 @@ client.on('ready', () => {
 
 // Evento de mensagem recebida
 client.on('message', async message => {
-    const { from, body, isGroupMsg } = message;
+    const { from, body } = message;
 
-    // Ignora mensagens de grupo
-    if (isGroupMsg) return;
+    // Verificação melhorada para mensagens de grupo
+    if (from.endsWith('@g.us')) {
+        return;
+    }
 
     // Verifica rate limiting
     if (!rateLimiter.isAllowed(from)) return;

@@ -33,7 +33,6 @@ const handleMessage = async (message) => {
 
     } catch (error) {
         console.error('Erro no handleMessage:', error);
-        await message.reply('❌ Ocorreu um erro interno. Tente novamente.');
     }
 };
 
@@ -43,6 +42,7 @@ async function processOption(message, from, option) {
         case 'sendLink':
             await message.reply(`🔗 Acesse: ${option.value}`);
             await resetSession(from);
+            await message.reply("⚠️ Sessão finalizada. Envie 'menu' para reiniciar.");
             break;
             
         case 'nextState':

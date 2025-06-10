@@ -11,9 +11,9 @@ module.exports = {
         ajuda_escolar: {
             text: "📚 *AJUDA ESCOLAR* 📚\n\n1. Acesso ao Portal\n2. Problemas com Login\n3. Material Didático\n\nDigite o número da opção:",
             options: {
-                '1': { action: 'sendLink', value: 'https://portal.educacao.salvador.ba.gov.br' },
-                '2': { action: 'sendLink', value: 'https://suporte.educacao.salvador.ba.gov.br/login' },
-                '3': { action: 'sendLink', value: 'https://materiais.educacao.salvador.ba.gov.br' }
+                '1': { action: 'sendLink', value: 'https://educacao.salvador.ba.gov.br' },
+                '2': { action: 'sendLink', value: 'https://educacao.salvador.ba.gov.br/login' },
+                '3': { action: 'sendLink', value: 'https://educacao.salvador.ba.gov.br' }
             }
         },
         abrir_chamado: {
